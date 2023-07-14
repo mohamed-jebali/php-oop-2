@@ -1,0 +1,11 @@
+ul{
+    list-style-type: none;
+}
+.card-img-top{
+    height: 500px;
+}
+
+.card-img-top:hover{
+    scale: 1.05;
+    transition: 1s;
+}
