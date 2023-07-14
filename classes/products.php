@@ -1,7 +1,7 @@
 <?php
 
-include_once __DIR__."/animal_category.php";
-include_once __DIR__."/article.php";
+include_once __DIR__."/sub_classes/animal_category.php";
+include_once __DIR__."/sub_classes/article.php";
 
 class Products extends Shop {
     public $img;
@@ -20,3 +20,6 @@ class Products extends Shop {
 
     }
 }
+
+
+?>

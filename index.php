@@ -14,7 +14,7 @@ class Shop {
     public $address;
     public $website;
 
-    public function __construct(String $address,String $website) {
+    public function __construct(String $address,String $website,Products $products) {
         $this->address = $address;
         $this->website = $website;
     }

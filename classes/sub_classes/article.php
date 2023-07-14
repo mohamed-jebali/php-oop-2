@@ -1,6 +1,6 @@
 <?php
 
-class Article {
+class Article extends Products {
     public $toys;
     public $food;
     public $pet_kennel;
