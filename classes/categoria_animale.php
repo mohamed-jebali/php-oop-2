@@ -1,17 +1,12 @@
 <?php
 
-class Category extends Shop {
-    public $toys;
-    public $food;
-    public $pet_kennel;
+class Animal_Type extends Shop {
+    public $dog;
+    public $cat;
 
     public function __construct(String $cat,String $dog) {
-        $this->toys = $toys;
-        $this->food = $food;
-        $this->pet_kennel = $pet_kennel;
+        $this->dog = $dog;
+        $this->cat = $cat;
     }
 }
 
-
-// I prodotti saranno oltre al cibo, anche giochi, cucce, etc.
-// Stampiamo delle card contenenti i dettagli dei prodotti, come immagine, titolo, prezzo, icona della categoria ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia). -->

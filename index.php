@@ -46,7 +46,7 @@ class Shop {
              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrJUIO00xVmwS4OvrElPWdap20JSyEb-A-gQ&usqp=CAU" class="card-img-top" alt="">
                <div class="card-body bg-success text-white">
                <h5 class="card-title"> <strong>Title:</strong></h5>
-               <p class="card-text"><strong>Price: </strong></p>
+               <h5 class="card-text"><strong>Price: </strong></h5>
                <p class="card-text"><strong>Category: </strong></p>
                <p class="card-text"> <strong>Type: </strong></p>
              </div>
@@ -56,6 +56,3 @@ class Shop {
 </div>
 </body>
 </html>
-
-<!-- // I prodotti saranno oltre al cibo, anche giochi, cucce, etc.
-// Stampiamo delle card contenenti i dettagli dei prodotti, come immagine, titolo, prezzo, icona della categoria ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia). --> 
