@@ -14,11 +14,17 @@ class Shop {
     public $address;
     public $website;
 
-    public function __construct(String $address,String $website,Products $products) {
+    public function __construct(String $address,String $website) {
         $this->address = $address;
         $this->website = $website;
     }
 }
+
+
+
+
+
+
 
 ?>
 
@@ -27,7 +33,8 @@ class Shop {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Php oop 2</title>
+    <title>Php oop 2 PetShop</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1581/1581622.png">
     <!-- CSS LINK -->
     <link rel="stylesheet" href="./style/style.css">
     <!-- BOOSTRAP LINK V.5.3.0 -->
