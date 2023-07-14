@@ -21,7 +21,7 @@ class Shop {
 }
 
 
-
+$monkey_toy = new Products ("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrJUIO00xVmwS4OvrElPWdap20JSyEb-A-gQ&usqp=CAU","Monkey Toy",15.55,"https://cdn-icons-png.flaticon.com/512/220/220124.png");
 
 
 
@@ -50,12 +50,12 @@ class Shop {
     <div class="row">
         <div class="col-4 mb-3">
              <div class="card">
-             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrJUIO00xVmwS4OvrElPWdap20JSyEb-A-gQ&usqp=CAU" class="card-img-top" alt="">
+             <img src="<?php echo $monkey_toy->img; ?>" class="card-img-top" alt="<?php $monkey_toy->title;?>">
                <div class="card-body bg-success text-white">
-               <h5 class="card-title"> <strong>Title:</strong></h5>
-               <h5 class="card-text"><strong>Price: </strong></h5>
-               <p class="card-text"><strong>Category: </strong></p>
-               <p class="card-text"> <strong>Type: </strong></p>
+               <h5 class="card-title"> <strong>Title: </strong><?php echo $monkey_toy->title ;?></h5>
+               <h5 class="card-text"><strong>Price: </strong> <?php echo $monkey_toy->price . " €" ;?> </h5>
+               <img src="<?php echo $monkey_toy->category; ?>" class="card-icon" alt="<?php $monkey_toy->title;?>">
+               <p class="card-text"> <strong>Type: </strong> <?php echo $monkey_toy->price . " €" ;?> </p>
              </div>
             </div>
         </div>
