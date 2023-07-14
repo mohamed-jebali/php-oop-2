@@ -8,13 +8,15 @@ class Products {
     public $title;
     public $price;
     public $category;
+    public $type;
 
 
-    public function __construct(String $img,String $title,float $price,String $category) {
+    public function __construct(String $img,String $title,float $price,String $category,String $type) {
         $this->img = $img;
         $this->title = $title;
         $this->price = $price;
         $this->category = $category;
+        $this->type = $type;
     }
 }
 
