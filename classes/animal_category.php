@@ -1,6 +1,6 @@
 <?php
 
-class Animal_Type extends Shop {
+class Animal_Category {
     public $dog;
     public $cat;
 

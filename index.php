@@ -7,8 +7,8 @@ I prodotti saranno oltre al cibo, anche giochi, cucce, etc.
 Stampiamo delle card contenenti i dettagli dei prodotti, come immagine, titolo, prezzo, icona della categoria ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia). -->
 
 <?php
-include_once __DIR__."/classes/categoria_animale.php";
-include_once __DIR__."/classes/prodotti.php";
+
+include_once __DIR__.'/classes/products.php';
 
 class Shop {
     public $address;
