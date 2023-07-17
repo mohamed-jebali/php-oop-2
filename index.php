@@ -52,12 +52,15 @@ class Shop {
                <h5 class="card-title"> <strong>Title: </strong><?php echo $product->title ;?></h5>
                <h5 class="card-text"><strong>Price: </strong> <?php echo $product->price . " €" ;?> </h5>
                <img src="<?php echo $product->category->image; ?>" class="card-icon" alt="<?php $product->category->name;?>">
-              <?php if(get_class(($product) === "Food")){?>
-                <p class="card-text"><strong>Calories and Taste: </strong> <?php echo $product->calories . $product->taste; ?></p>
+              <?php if(get_class($product) === "Food"){?>
+                <p class="card-text"><strong>Calories : </strong> <?php echo $product->calories; ?>  Kcal</p>
+                <p class="card-text"><strong>Taste : </strong> <?php echo $product->taste; ?></p>
                <?php } elseif (get_class($product) === "Toys") {?>
                   <p class="card-text"><strong>Color: </strong> <?php echo $product->color; ?></p>
+                  <p class="card-text"><strong>Color: </strong> <?php echo $product->material; ?></p>
                   <?php } elseif (get_class($product) === "PetKennel") {?>
-                  <p class="card-text"><strong>Size and Material: </strong> <?php echo $product->size . $product->material; ?></p>
+                  <p class="card-text"><strong>Size: </strong> <?php echo $product->size; ?></p>
+                  <p class="card-text"><strong>Material: </strong> <?php echo $product->material; ?></p>
                <?php } ?>
              </div>
             </div>
