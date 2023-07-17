@@ -53,11 +53,11 @@ class Shop {
                <h5 class="card-text"><strong>Price: </strong> <?php echo $product->price . " €" ;?> </h5>
                <img src="<?php echo $product->category->image; ?>" class="card-icon" alt="<?php $product->category->name;?>">
               <?php if(get_class(($product) === "Food")){?>
-                <p class="card-text"><strong>Price: </strong> <?php echo $product->calories . $product->taste; ?></p>
-               <?php } elseif (get_class($product) === "toys") {?>
-                  <p class="card-text"><strong>Price: </strong> <?php echo $product->color; ?></p>
-                  <?php } elseif (get_class($product) === "pet_kennel") {?>
-                  <p class="card-text"><strong>Price: </strong> <?php echo $product->size . $product->material; ?></p>
+                <p class="card-text"><strong>Calories and Taste: </strong> <?php echo $product->calories . $product->taste; ?></p>
+               <?php } elseif (get_class($product) === "Toys") {?>
+                  <p class="card-text"><strong>Color: </strong> <?php echo $product->color; ?></p>
+                  <?php } elseif (get_class($product) === "PetKennel") {?>
+                  <p class="card-text"><strong>Size and Material: </strong> <?php echo $product->size . $product->material; ?></p>
                <?php } ?>
              </div>
             </div>

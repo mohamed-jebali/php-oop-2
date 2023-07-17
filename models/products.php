@@ -6,7 +6,6 @@ class Products {
     public $img;
     public $title;
     public $price;
-    public $toys;
     public $category;
 
 

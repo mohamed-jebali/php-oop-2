@@ -2,14 +2,12 @@
 
 include_once __DIR__."/products.php";
 
-class Pet_Kennel extends Products {
-    public $name;
+class PetKennel extends Products {
     public $size;
     public $material;
 
-    public function __construct(String $name,String $size,String $material) {
-        parent::__construct($img, $title, $price);
-        $this->name = $name;
+    public function __construct(String $img,String $title,String $price,Category $category,String $size,String $material) {
+        parent::__construct($img, $title, $price,$category);
         $this->size = $size;
         $this->material = $material;
     }
