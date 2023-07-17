@@ -61,6 +61,9 @@ class Shop {
                   <?php } elseif (get_class($product) === "PetKennel") {?>
                   <p class="card-text"><strong>Size: </strong> <?php echo $product->size; ?></p>
                   <p class="card-text"><strong>Material: </strong> <?php echo $product->material; ?></p>
+               <?php } elseif (get_class($product) === "Products") {?>
+                  <p class="card-text"><strong>Size: </strong> 130cm x 100cm x 80cm </p>
+                  <p class="card-text"><strong>Material: </strong> Polyester</p>
                <?php } ?>
              </div>
             </div>
