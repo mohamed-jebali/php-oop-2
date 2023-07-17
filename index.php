@@ -8,11 +8,7 @@ Stampiamo delle card contenenti i dettagli dei prodotti, come immagine, titolo, 
 
 <?php
 
-include_once __DIR__."/models/food.php";
-include_once __DIR__."/models/toys.php";
-include_once __DIR__."/models/category.php";
-include_once __DIR__."/models/pet_kennel.php";
-include_once __DIR__."/models/products.php";
+include_once __DIR__."/db/database.php";
 
 class Shop {
     public $address;
@@ -23,17 +19,6 @@ class Shop {
         $this->website = $website;
     }
 }
-
-$dogitems = new Category ("Dog","https://cdn-icons-png.flaticon.com/512/620/620851.png");
-
-$monkey_toy = new Products ("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrJUIO00xVmwS4OvrElPWdap20JSyEb-A-gQ&usqp=CAU","Monkey Toy",15.55,$dogitems);
-
-
-// $doggy_house = new Products ("https://arcaplanet.vtexassets.com/arquivos/ids/227610/p-a-y--cuccia-alcazar-70.jpg?v=1775607824","Doggy House",50.45,"https://cdn-icons-png.flaticon.com/512/620/620851.png","pet_kennel");
-
-
-// $whiskas_food = new Products ("https://fera24.it/images/thumbnails/960/1214/detailed/129/5998749144213F1.jpg","Whiskas",20.99,"https://cdn-icons-png.flaticon.com/512/220/220124.png","Food");
-
 
 
 
@@ -59,38 +44,25 @@ $monkey_toy = new Products ("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd
     </header>
 <div class="container mx-auto">
     <div class="row">
+        <?php foreach ($list_products as $product) {?>
         <div class="col-4 mb-3">
-             <div class="card">
-             <img src="<?php echo $monkey_toy->img; ?>" class="card-img-top" alt="<?php $monkey_toy->title;?>">
+            <div class="card">
+            <img src="<?php echo $product->img; ?>" class="card-img-top" alt="<?php $product->title;?>">
                <div class="card-body bg-success text-white">
-               <h5 class="card-title"> <strong>Title: </strong><?php echo $monkey_toy->title ;?></h5>
-               <h5 class="card-text"><strong>Price: </strong> <?php echo $monkey_toy->price . " €" ;?> </h5>
-               <img src="<?php echo $monkey_toy->category->image; ?>" class="card-icon" alt="<?php $monkey_toy->category->name;?>">
+               <h5 class="card-title"> <strong>Title: </strong><?php echo $product->title ;?></h5>
+               <h5 class="card-text"><strong>Price: </strong> <?php echo $product->price . " €" ;?> </h5>
+               <img src="<?php echo $product->category->image; ?>" class="card-icon" alt="<?php $product->category->name;?>">
+              <?php if(get_class(($product) === "Food")){?>
+                <p class="card-text"><strong>Price: </strong> <?php echo $product->calories . $product->taste; ?></p>
+               <?php } elseif (get_class($product) === "toys") {?>
+                  <p class="card-text"><strong>Price: </strong> <?php echo $product->color; ?></p>
+                  <?php } elseif (get_class($product) === "pet_kennel") {?>
+                  <p class="card-text"><strong>Price: </strong> <?php echo $product->size . $product->material; ?></p>
+               <?php } ?>
              </div>
             </div>
         </div>
-        <!-- <div class="col-4 mb-3">
-             <div class="card">
-             <img src="<?php echo $doggy_house->img; ?>" class="card-img-top" alt="<?php $doggy_house->title;?>">
-               <div class="card-body bg-success text-white">
-               <h5 class="card-title"> <strong>Title: </strong><?php echo $doggy_house->title ;?></h5>
-               <h5 class="card-text"><strong>Price: </strong> <?php echo $doggy_house->price . " €" ;?> </h5>
-               <img src="<?php echo $doggy_house->category; ?>" class="card-icon" alt="<?php $doggy_house->title;?>">
-               <p class="card-text"> <strong>Type: </strong> <?php echo $doggy_house->type;?> </p>
-             </div>
-            </div>
-        </div>
-        <div class="col-4 mb-3">
-             <div class="card">
-             <img src="<?php echo $whiskas_food->img; ?>" class="card-img-top" alt="<?php $whiskas_food->title;?>">
-               <div class="card-body bg-success text-white">
-               <h5 class="card-title"> <strong>Title: </strong><?php echo $whiskas_food->title ;?></h5>
-               <h5 class="card-text"><strong>Price: </strong> <?php echo $whiskas_food->price . " €" ;?> </h5>
-               <img src="<?php echo $whiskas_food->category; ?>" class="card-icon" alt="<?php $whiskas_food->title;?>">
-               <p class="card-text"> <strong>Type: </strong> <?php echo $whiskas_food->type;?> </p>
-             </div>
-            </div>
-        </div> -->
+        <?php } ?>
     </div>
 </div>
 </body>

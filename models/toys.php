@@ -8,6 +8,7 @@ class Toys extends Products {
 
 
     public function __construct(String $name,String $color) {
+        parent::__construct($img, $title, $price);
         $this->name = $name;
         $this->color = $color;
     }
